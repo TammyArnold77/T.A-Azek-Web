@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merch | T.A</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: #fff;
+        line-height: 1.6;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.85);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        height: 60px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #e91e63;
+      }
+      section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 60px 20px;
+      }
+      h1,
+      h2 {
+        color: #e91e63;
+        text-align: center;
+      }
+      .merch-item {
+        background: #1c1c1c;
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        width: 90%;
+        max-width: 1000px;
+      }
+      .merch-item img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+      }
+      .merch-info h3 {
+        margin: 0 0 10px;
+      }
+      .buy-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #e91e63;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .buy-button:hover {
+        background: #c2185b;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        margin-top: 40px;
+        color: #999;
+      }
+      /* hide hamburger on desktop */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+      }
+
+      /* 📱 MOBILE */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background: black;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          padding: 10px;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .merch-item img {
+          max-width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><img src="Logo-for-music.png" alt="My Logo" class="logo" /></div>
+      <nav>
+        <div class="menu-toggle">☰</div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="gallery.html">Gallery & Songs</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="merch">
+      <h1>Official Merchandise</h1>
+      <p style="text-align: center">
+        Shop exclusive merchandise inspired by my songs and album artwork.
+      </p>
+
+      <div class="merch-item">
+        <img
+          src="ChatGPT Image Aug 21, 2025, 06_02_44 PM.png"
+          alt="Album Cover T-Shirt"
+        />
+        <div class="merch-info">
+          <h3>Album Cover T-Shirt</h3>
+          <p>
+            Wear the face of my latest album proudly with this stylish t-shirt.
+          </p>
+          <a href="#" class="buy-button">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="merch-item">
+        <img
+          src="ChatGPT Image Aug 21, 2025, 06_27_31 PM.png"
+          alt="Song Title Hoodie"
+        />
+        <div class="merch-info">
+          <h3>Song Title Hoodie</h3>
+          <p>
+            A comfy hoodie featuring artwork inspired by one of my top songs.
+          </p>
+          <a href="#" class="buy-button">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="merch-item">
+        <img
+          src="ChatGPT Image Aug 26, 2025, 05_35_39 PM.png"
+          alt="Album Cap"
+        />
+        <div class="merch-info">
+          <h3>Album Cover Cap</h3>
+          <p>
+            A sleek cap with embroidered album design to top off your style.
+          </p>
+          <a href="#" class="buy-button">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Tammy Arnold. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+  <!-- <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
+  <script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+    createChat({
+      webhookUrl:
+        "https://tammy-arnold.app.n8n.cloud/webhook/af9b8191-2594-419a-bbd7-7e0a815071c5/chat",
+      // ... other configuration options
+      initialMessages: [
+        "Hi there! 👋",
+        "My name is Azek.Jr. How can I assist you today?",
+      ],
+      // ... other configuration options
+    });
+  </script> -->
+</html>

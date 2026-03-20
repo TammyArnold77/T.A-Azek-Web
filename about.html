@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | T.A</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        line-height: 1.6;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        height: 60px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #e91e63;
+      }
+      .about-section {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+      }
+      .about-section h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #e91e63;
+      }
+      .about-section p {
+        margin-bottom: 20px;
+        color: #ddd;
+      }
+      .experience {
+        margin-top: 50px;
+        text-align: left;
+      }
+      .experience h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #e91e63;
+      }
+      .experience ul {
+        list-style: none;
+        padding: 0;
+      }
+      .experience ul li {
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .songs {
+        margin-top: 50px;
+        text-align: left;
+      }
+      .songs h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #e91e63;
+      }
+      .song {
+        margin: 20px 0;
+      }
+      audio {
+        margin-top: 10px;
+      }
+      footer {
+        margin-top: 60px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #999;
+        text-align: center;
+      }
+      /* hide hamburger on desktop */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+      }
+
+      /* 📱 MOBILE */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background: black;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          padding: 10px;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><img src="Logo-for-music.png" alt="My Logo" class="logo" /></div>
+      <nav>
+        <div class="menu-toggle">☰</div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="gallery.html">Gallery & Songs</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="about-section">
+      <h1>About Me</h1>
+      <p>
+        Wassup Niggas, I’m <strong>Tammy Arnold</strong>. Music has always been
+        my passion, and through my songs I share my story, my experiences, and
+        my vision with the world.
+      </p>
+      <p>
+        Over the years, I have grown from performing in small concerts to bigger
+        tours and collaborations. My journey is defined by persistence,
+        creativity, and love for sound.
+      </p>
+
+      <!-- Experience Section -->
+      <div class="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>2019:</strong> First live performance at a local concert
+            with 500+ audience.
+          </li>
+          <li>
+            <strong>2021:</strong> Released debut EP that gained over 50k
+            streams worldwide.
+          </li>
+          <li>
+            <strong>2022:</strong> Collaborated with international producers and
+            artists.
+          </li>
+          <li>
+            <strong>2023:</strong> Headlined a regional tour across 5 major
+            cities.
+          </li>
+          <li><strong>2024:</strong> Won best Rapper at Grammy Awards.</li>
+        </ul>
+      </div>
+
+      <!-- Songs Section -->
+      <div class="songs">
+        <h2>Featured Songs</h2>
+        <div class="song">
+          <h3>Azek Mode (Latest Song)</h3>
+          <audio controls>
+            <source src="Azek Mode.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div class="song">
+          <h3>Chasing Clouds</h3>
+          <audio controls>
+            <source src="Chasing Clouds.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Tammy Arnold. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+  <!-- <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
+  <script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+    createChat({
+      webhookUrl:
+        "https://tammy-arnold.app.n8n.cloud/webhook/af9b8191-2594-419a-bbd7-7e0a815071c5/chat",
+      // ... other configuration options
+      initialMessages: [
+        "Hi there! 👋",
+        "My name is Azek.Jr. How can I assist you today?",
+      ],
+      // ... other configuration options
+    });
+  </script> -->
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery & Songs | T.A</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        line-height: 1.6;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        height: 60px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #e91e63;
+      }
+      .gallery {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .gallery h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #e91e63;
+      }
+      .photos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+      .photos img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .songs {
+        margin-top: 40px;
+      }
+      .song {
+        margin-bottom: 25px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+      }
+      .song h3 {
+        margin: 0 0 10px;
+        color: #e91e63;
+      }
+      .song audio {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .song a {
+        display: inline-block;
+        padding: 8px 15px;
+        background: #e91e63;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 0.9em;
+      }
+      .song a:hover {
+        background: #c2185b;
+      }
+      footer {
+        margin-top: 60px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #999;
+        text-align: center;
+      }
+      /* hide hamburger on desktop */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+      }
+
+      /* 📱 MOBILE */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background: black;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          padding: 10px;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><img src="Logo-for-music.png" alt="My Logo" class="logo" /></div>
+      <nav>
+        <div class="menu-toggle">☰</div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="gallery">
+      <h1>Gallery & Songs</h1>
+
+      <!-- Photo Gallery -->
+      <div class="photos">
+        <img
+          src="Gemini_Generated_Image_ghic9gghic9gghic.png"
+          alt="Concert 1"
+        />
+        <img
+          src="ChatGPT Image Aug 26, 2025, 05_20_41 PM.png"
+          alt="Concert 2"
+        />
+        <img
+          src="Gemini_Generated_Image_prkparprkparprkp.png"
+          alt="Concert 3"
+        />
+        <img
+          src="Gemini_Generated_Image_xeo44vxeo44vxeo4.png"
+          alt="Concert 4"
+        />
+      </div>
+
+      <!-- Songs -->
+      <div class="songs">
+        <div class="song">
+          <h3>Azek Mode</h3>
+          <audio controls>
+            <source src="Azek Mode.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <a href="Azek Mode.mp3" download>Download</a>
+        </div>
+        <div class="song">
+          <h3>Chasing Clouds</h3>
+          <audio controls>
+            <source src="Chasing Clouds.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <a href="Chasing Clouds.mp3" download>Download</a>
+        </div>
+        <div class="song">
+          <h3>Can't Hold Me Back</h3>
+          <audio controls>
+            <source src="Can_t Hold Me Back.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <a href="Can_t Hold Me Back.mp3" download>Download</a>
+        </div>
+        <div class="song">
+          <h3>Bags On Me</h3>
+          <audio controls>
+            <source src="Bags on Me.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <a href="Bags on Me.mp3" download>Download</a>
+        </div>
+        <div class="song">
+          <h3>We Gon' Rise</h3>
+          <audio controls>
+            <source src="We Gon_ Rise.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <a href="We Gon_ Rise.mp3" download>Download</a>
+        </div>
+        <div class="song">
+          <h3>Rhythm & Vibes</h3>
+          <audio controls>
+            <source src="Rhythm & Vibes.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <a href="Rhythm & Vibes.mp3" download>Download</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Tammy Arnold. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+  <!-- <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
+  <script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+    createChat({
+      webhookUrl:
+        "https://tammy-arnold.app.n8n.cloud/webhook/af9b8191-2594-419a-bbd7-7e0a815071c5/chat",
+      // ... other configuration options
+      initialMessages: [
+        "Hi there! 👋",
+        "My name is Azek.Jr. How can I assist you today?",
+      ],
+      // ... other configuration options
+    });
+  </script> -->
+</html>

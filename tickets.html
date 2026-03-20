@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets | T.A</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        line-height: 1.6;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        height: 60px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #e91e63;
+      }
+      .tickets {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .tickets h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #e91e63;
+      }
+      .tickets-section {
+        margin-bottom: 50px;
+      }
+      .tickets-section h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #e91e63;
+      }
+      .tickets-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      .tickets-section ul li {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+      }
+      form {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px 40px 20px 20px;
+        border-radius: 8px;
+      }
+      form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+      }
+      form input,
+      form select,
+      form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+      form input,
+      form select {
+        background: #222;
+        color: #fff;
+      }
+      form button {
+        background: #e91e63;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      form button:hover {
+        background: #c2185b;
+      }
+      footer {
+        margin-top: 60px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #999;
+        text-align: center;
+      }
+      /* hide hamburger on desktop */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+      }
+
+      /* 📱 MOBILE */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background: black;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          padding: 10px;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><img src="Logo-for-music.png" alt="My Logo" class="logo" /></div>
+      <nav>
+        <div class="menu-toggle">☰</div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="gallery.html">Gallery & Songs</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="tickets">
+      <h1>Tickets</h1>
+
+      <!-- Past Tours -->
+      <div class="tickets-section">
+        <h2>Past Tours</h2>
+        <ul>
+          <li>
+            <strong>2022 Summer Tour</strong> — 5 cities, 10,000+ tickets sold.
+          </li>
+          <li>
+            <strong>2023 World Tour</strong> — 12 countries, 45,000+ tickets
+            sold.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Future Tours -->
+      <div class="tickets-section">
+        <h2>Upcoming Tours</h2>
+        <ul>
+          <li><strong>2025 Africa Tour</strong> — Starting June 2025.</li>
+          <li><strong>2025 Europe Tour</strong> — Coming Winter 2025.</li>
+        </ul>
+      </div>
+
+      <!-- Ticket Booking Form -->
+      <div class="tickets-section">
+        <h2>Book Tickets</h2>
+        <form>
+          <label for="tour">Select Tour</label>
+          <select id="tour" name="tour" required>
+            <option value="">-- Choose a Tour --</option>
+            <option value="africa2025">Africa Tour 2025</option>
+            <option value="europe2025">Europe Tour 2025</option>
+          </select>
+
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="quantity">Number of Tickets</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            max="10"
+            required
+          />
+
+          <button type="submit">Book Tickets</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Tammy Arnold. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+  <!-- <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
+  <script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+    createChat({
+      webhookUrl:
+        "https://tammy-arnold.app.n8n.cloud/webhook/af9b8191-2594-419a-bbd7-7e0a815071c5/chat",
+      // ... other configuration options
+      initialMessages: [
+        "Hi there! 👋",
+        "My name is Azek.Jr. How can I assist you today?",
+      ],
+      // ... other configuration options
+    });
+  </script> -->
+</html>

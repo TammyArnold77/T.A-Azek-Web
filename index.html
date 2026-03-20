@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | T.A</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: rgba(0, 0, 0, 0.9);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        height: 60px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: #e91e63;
+      }
+      .landing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .album-cover {
+        max-width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+      }
+      .album-title {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+        color: #e91e63;
+      }
+      .artist-name {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #ccc;
+      }
+      .release-date {
+        margin-bottom: 20px;
+        font-style: italic;
+        color: #bbb;
+      }
+      .audio-player {
+        margin: 20px 0;
+      }
+      .download-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        margin-top: 10px;
+        background-color: #e91e63;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      .download-btn:hover {
+        background-color: #c2185b;
+      }
+      footer {
+        margin-top: 60px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #999;
+        text-align: center;
+      }
+      /* hide hamburger on desktop */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+      }
+
+      /* 📱 MOBILE */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background: black;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 200px;
+          padding: 10px;
+        }
+
+        nav ul.active {
+          display: flex;
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><img src="Logo-for-music.png" alt="MyLogo" class="logo" /></div>
+      <nav>
+        <div class="menu-toggle">☰</div>
+
+        <ul id="menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="gallery.html">Gallery & Songs</a></li>
+          <li><a href="merch.html">Merch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="landing">
+      <img src="Azek Mode Album.png" alt="Album Cover" class="album-cover" />
+      <h2 class="album-title">Azek Mode</h2>
+      <p class="artist-name">By Tammy Arnold</p>
+      <p class="release-date">Released: August 2025</p>
+
+      <div class="audio-player">
+        <audio controls>
+          <source src="Azek Mode.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <a href="Azek Mode.mp3" download class="download-btn">Download Song</a>
+    </section>
+
+    <footer>
+      <p>© 2025 Tammy Arnold. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+  <!-- <link
+    href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+    rel="stylesheet"
+  />
+  <script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+    createChat({
+      webhookUrl:
+        "https://tammy-arnold.app.n8n.cloud/webhook/af9b8191-2594-419a-bbd7-7e0a815071c5/chat",
+      // ... other configuration options
+      initialMessages: [
+        "Hi there! 👋",
+        "My name is Azek.Jr. How can I assist you today?",
+      ],
+      // ... other configuration options
+    });
+  </script> -->
+</html>
